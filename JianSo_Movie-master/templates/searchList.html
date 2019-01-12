@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset=utf-8>
+        <meta name="viewport" content="width=decive-width, initial-scale=1.0,user-scalable=no, minimal-ui"/>
+        <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/main.css')}}"/>
+        <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/animation.css')}}"/>
+        <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/search.css')}}"/>
+        <title>[{{title}}]相关电影-Jian'So</title>
+    </head>
+    <body>
+        <header>
+            <div class="logo">Jian'So</div>
+        </header>
+        <section>
+            <div class="message-total">共找到了{{result_len}}部相关电影</div>
+            {% for item in result %}
+            <div class="item" _src="{{item[1]}}">
+                <div class="item-dashBar">
+                    <div class="dash-label">{{item[0]}}</div>
+                    <div class="dash-icon"></div>
+                </div>
+                <div class="item-img" style="background-image:url({{url_for('static', filename='images/'+item[3][-16:].replace('/','_'))}})"></div>
+                <div class="item-label">
+                    <div class="label-title">{{item[0]}}</div>
+                    <div class="label-detail">{{item[2]}}</div>
+                </div>
+            </div>
+            {% endfor %}
+
+        </section>
+        <script src="{{url_for('static', filename='scripts/jquery-2.1.4.min.js')}}"></script>
+        <script src="{{url_for('static', filename='scripts/search.js')}}"></script>
+    </body>
+</html>

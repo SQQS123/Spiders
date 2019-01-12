@@ -1,0 +1,55 @@
+section {
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+    /*align-items: center;*/
+    align-items: center;
+}
+section > .logo {
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 1rem;
+    height: 50vh;
+    line-height: 50vh;
+    font-family: monospace;
+    text-align: center;
+}
+section > .search-box {
+    /*width: 450px;*/
+    width: 9rem;
+    overflow: hidden;
+    border-radius: 4px;
+    transition: box-shadow .6s ease;
+    display: flex;
+    align-self: center;
+}
+section > .search-box:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);;
+
+}
+.search-box > .key-input {
+    float: left;
+    padding: 0;
+    margin: 0;
+    height: 36px;
+    border-style: solid;
+    border-color: rgb(69, 168, 240);
+    border-width: 2px;
+    border-radius: 4px 0 0 4px;
+    outline: none;
+    font-size: 20px;
+    text-indent: 10px;
+    flex: 0 0 80%;
+    background-color: rgba(255, 255, 255, 0.4);
+}
+.search-box > .key-submit {
+    float: left;
+    background-color: rgb(69, 168, 240);
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    transition: background-color .6s ease;
+    flex: 0 0 20%;
+
+}
+.search-box > .key-submit:hover {
+    background-color: rgba(69, 168, 240, 0.8);
+}

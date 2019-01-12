@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset=utf-8>
+        <meta name="viewport" content="width=decive-width, initial-scale=1.0,user-scalable=no, minimal-ui"/>
+        <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/main.css')}}"/>
+        <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/animation.css')}}"/>
+        <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/index.css')}}"/>
+        <title>Jian'So</title>
+    </head>
+    <body>
+        <section>
+            <div class="logo">Jian'So</div>
+            <div class="search-box">
+                <input class="key-input" type="text" name="key" value="{{defaultKey}}">
+                <div class="key-submit"></div>
+            </div>
+        </section>
+        <script src="{{url_for('static', filename='scripts/jquery-2.1.4.min.js')}}"></script>
+        <script src="{{url_for('static', filename='scripts/index.js')}}"></script>
+    </body>
+
+
+</html>
